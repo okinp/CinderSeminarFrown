@@ -1,4 +1,4 @@
-# Examples for the Cinder Seminar @ Frown
+# Cinder Seminar @ Frown
 
 
 ## OS X
