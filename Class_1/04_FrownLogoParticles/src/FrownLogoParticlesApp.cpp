@@ -51,15 +51,10 @@ void FrownLogoParticlesApp::keyDown( KeyEvent event )
 void FrownLogoParticlesApp::setup()
 {
     mKeyPressed = false;
-    // Lets load a font from the assets folder
+    // Lets load a font from the the installed fonts of the OS
     // and set its size to 90
-    
-    mFont = Font( loadAsset("myFont.ttf"),90 );
-    
-    // You could also load a font from the installed fonts
-    // as follows:
-    
-    mFont = Font( "Arial",90 );
+
+    mFont = Font("Arial",90 );
     
     //Clear the layout to black
     
@@ -162,6 +157,8 @@ void FrownLogoParticlesApp::draw()
     glPointSize(1);
     glEnable(GL_POINT_SMOOTH);
     gl::enableAlphaBlending();
+    //******  Try changing GL_POINTS to:
+    // GL_LINES  or other OpenGL primitives
     glBegin(GL_POINTS);
     
     for ( int i=0; i< mCurrentPositions.size(); i++ )
