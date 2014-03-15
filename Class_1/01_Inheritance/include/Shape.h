@@ -29,7 +29,7 @@ public:
     // As a rule of thumb, we ALWAYS write the keyword virtual before the destructor.
     //
     
-    virtual ~Shape();
+     virtual ~Shape();
     
     void                setPosition( ci::Vec2i pos );
     void                setSize( float size );

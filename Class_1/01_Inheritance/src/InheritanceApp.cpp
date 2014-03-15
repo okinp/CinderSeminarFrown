@@ -17,7 +17,7 @@ class InheritanceApp : public AppNative {
 	void draw();
     //
     // The following will be used in Step F:
-    // vector<Shape*>  myShapes;
+    //vector<Shape*>  myShapes;
     //
     // The following will be used in Step H:
     // vector< shared_ptr<Shape> > myShapes;
@@ -105,8 +105,8 @@ void InheritanceApp::setup()
     
     // *********** Uncomment the following 2 lines
     
-    //Shape *myCircle = new Circle();
-    //delete myCircle;
+//    Shape *myCircle = new Circle();
+//    delete myCircle;
 
     //  The * symbol indicates that myCircle is a pointer.
     
@@ -186,7 +186,7 @@ void InheritanceApp::setup()
     //----------Step F ----------//
     
     // *********** Comment out the myShape shared pointer from the previous
-    // step (line 168)
+    // step (line 163)
     
     // *********** Uncomment line 20 where a vector of Shape pointers is defined
     
@@ -196,8 +196,10 @@ void InheritanceApp::setup()
     
     // *********** Uncomment the following 2 lines
     
-    // myShapes.push_back( new Circle(Vec2i(200,300),80) );
-    // myShapes.push_back( new Square(Vec2i(400,100),40) );
+//    myShapes.push_back( new Circle(Vec2i(200,300),80) );
+//    myShapes.push_back( new Square(Vec2i(400,100),40) );
+    
+    // *********** Uncomment the for loop in the draw() method
     
     // As you've noticed, we used the non-default constructor accepting position
     // and size of the object.
@@ -253,6 +255,9 @@ void InheritanceApp::setup()
     // *********** Uncomment line 23 where myShapes is a vector
     // of shared pointers to Shape
     
+    // *********** Comment out the 2 lines where we pushed back
+    // some pointers in Step F
+    
     
     // *********** Uncomment the following two lines:
     
@@ -281,7 +286,7 @@ void InheritanceApp::mouseDown( MouseEvent event )
 //        delete myShapes[i];
 //    }
     
-//    myShapes.clear();
+ //   myShapes.clear();
     
 }
 
