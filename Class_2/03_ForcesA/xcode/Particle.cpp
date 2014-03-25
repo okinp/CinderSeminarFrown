@@ -7,7 +7,7 @@
 //
 
 #include "Particle.h"
-
+#include "cinder/app/App.h"
 Particle::Particle()
 :mPosition(Vec2f::zero())
 ,mVelocity(Vec2f::zero())
@@ -24,7 +24,7 @@ Particle::Particle(float radius)
 ,mAcceleration(Vec2f::zero())
 ,mRadius(radius)
 {
-    //Using an initialization list
+
 }
 void Particle::setPosition(const Vec2f &pos)
 {
@@ -42,23 +42,30 @@ Vec2f Particle::getVelocity()
 {
     return mVelocity;
 }
+
 void Particle::setRadius(float radius )
 {
     mRadius = radius;
 }
-void Particle::applyForce(const Vec2f& force)
+
+void Particle::applyForce( const Vec2f& force)
 {
     mAcceleration+=force;
 }
+
 void Particle::renderVelocity( bool shouldRender )
 {
     mShowVelocity = shouldRender;
 }
 void Particle::update()
 {
+    //mVelocity = mVelocity + mAcceleration;
     mVelocity += mAcceleration;
-    mPosition+=mVelocity;
+    app::console() << "Velocity before: " << mVelocity << std::endl;
     mVelocity.limit(5);
+    app::console() << "Velocity after: " << mVelocity << std::endl;
+    mPosition+=mVelocity;
+
     //Set acceleration to zero
     mAcceleration *=0;
 }

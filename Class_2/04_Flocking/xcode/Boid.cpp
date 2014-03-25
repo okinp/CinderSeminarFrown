@@ -8,6 +8,7 @@
 
 #include "Boid.h"
 #include "cinder/Rand.h"
+using namespace ci::gl;
 namespace oem {
     Boid::Boid( const Vec2f &pos)
     {
@@ -83,6 +84,7 @@ namespace oem {
 //        vertex(r, r*2);
 //        endShape();
 //        popMatrix();
+        gl::popMatrices();
         gl::drawSolidCircle(mLocation, mR);
     }
     void Boid::borders()

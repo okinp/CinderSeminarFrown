@@ -29,6 +29,8 @@ private:
     Vec2f       mAcceleration;
     float       mRadius;
     bool        mShowVelocity;
+    int         mLifetime;
+    bool        mIsAlive;
 };
 typedef std::shared_ptr<Particle> ParticleRef;
 #endif /* defined(__Forces__Particle__) */

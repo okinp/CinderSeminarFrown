@@ -3,6 +3,7 @@
 #include "cinder/params/Params.h"
 #include "cinder/gl/TextureFont.h"
 #include "cinder/Utilities.h"
+#include "cinder/Vector.h"
 #include <sstream>
 using namespace ci;
 using namespace ci::app;

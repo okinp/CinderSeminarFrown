@@ -52,6 +52,7 @@ void Particle::renderVelocity( bool shouldRender )
 }
 void Particle::update()
 {
+    mLifetime +=1;
     mAcceleration.limit(5);
     mVelocity += mAcceleration;
     mPosition+=mVelocity;

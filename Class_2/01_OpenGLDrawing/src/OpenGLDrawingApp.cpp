@@ -33,7 +33,7 @@ void OpenGLDrawingApp::setup()
 
 void OpenGLDrawingApp::mouseDown( MouseEvent event )
 {
-    //createCircle(Vec3f(event.getX(), event.getY(),0), 30, 50);
+   // createCircle(Vec3f(event.getX(), event.getY(),0), 30, 50);
     mPoints.push_back(Vec3f(event.getX(), event.getY(),0));
     mColors.push_back(mCurrentColor);
 }
@@ -43,6 +43,7 @@ void OpenGLDrawingApp::keyDown( KeyEvent event )
     if ( event.getChar() == ' ')
     {
         mPoints.clear();
+        mColors.clear();
     }
 }
 

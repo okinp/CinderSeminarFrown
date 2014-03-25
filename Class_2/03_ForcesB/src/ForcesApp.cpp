@@ -63,7 +63,7 @@ void ForcesApp::update()
 {
     if ( !mShouldUpdate )
         return;
-    ci::Vec2f gravity(0, 0.2);
+    ci::Vec2f gravity = ci::Vec2f(0, 0.2);
     for ( int i=0; i< mParticles.size(); i++ )
     {
         mParticles[i]->applyForce(gravity);

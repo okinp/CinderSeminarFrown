@@ -152,7 +152,7 @@ void FrownLogoParticlesApp::update()
 
 void FrownLogoParticlesApp::draw()
 {
-//	// clear out the window with black
+	// clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) );
     glPointSize(1);
     glEnable(GL_POINT_SMOOTH);
