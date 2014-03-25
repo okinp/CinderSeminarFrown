@@ -16,8 +16,8 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		8EAD137418D9E40500D229F0 /* Flock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD137218D9E40500D229F0 /* Flock.cpp */; };
-		8EAD137518D9E40500D229F0 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD137318D9E40500D229F0 /* Boid.cpp */; };
+		8E31ECA818E1B9EE00AE24DA /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E31ECA618E1B9EE00AE24DA /* Boid.cpp */; };
+		8E31ECA918E1B9EE00AE24DA /* Flock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E31ECA718E1B9EE00AE24DA /* Flock.cpp */; };
 		B9669FA788DB438A9103638C /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5B6CFB4110A14DDE9B66369A /* CinderApp.icns */; };
 /* End PBXBuildFile section */
 
@@ -35,10 +35,10 @@
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		5B6CFB4110A14DDE9B66369A /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Flocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EAD137018D9E3F800D229F0 /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boid.h; sourceTree = "<group>"; };
-		8EAD137118D9E3F800D229F0 /* Flock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flock.h; sourceTree = "<group>"; };
-		8EAD137218D9E40500D229F0 /* Flock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Flock.cpp; sourceTree = "<group>"; };
-		8EAD137318D9E40500D229F0 /* Boid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
+		8E31ECA418E1B9E400AE24DA /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boid.h; sourceTree = "<group>"; };
+		8E31ECA518E1B9E400AE24DA /* Flock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flock.h; sourceTree = "<group>"; };
+		8E31ECA618E1B9EE00AE24DA /* Boid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
+		8E31ECA718E1B9EE00AE24DA /* Flock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Flock.cpp; sourceTree = "<group>"; };
 		A3BD5FABD1354AAFB9F52EBF /* Flocking_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = Flocking_Prefix.pch; sourceTree = "<group>"; };
 		BD1FE96FC8DD43808BA8A6CA /* FlockingApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = FlockingApp.cpp; path = ../src/FlockingApp.cpp; sourceTree = "<group>"; };
 		F36A71752E014D729B526D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,8 +73,8 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8EAD137218D9E40500D229F0 /* Flock.cpp */,
-				8EAD137318D9E40500D229F0 /* Boid.cpp */,
+				8E31ECA618E1B9EE00AE24DA /* Boid.cpp */,
+				8E31ECA718E1B9EE00AE24DA /* Flock.cpp */,
 				BD1FE96FC8DD43808BA8A6CA /* FlockingApp.cpp */,
 			);
 			name = Source;
@@ -128,8 +128,8 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				8EAD137018D9E3F800D229F0 /* Boid.h */,
-				8EAD137118D9E3F800D229F0 /* Flock.h */,
+				8E31ECA418E1B9E400AE24DA /* Boid.h */,
+				8E31ECA518E1B9E400AE24DA /* Flock.h */,
 				39E1FA349EA54167B2A0552B /* Resources.h */,
 				A3BD5FABD1354AAFB9F52EBF /* Flocking_Prefix.pch */,
 			);
@@ -218,9 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EAD137518D9E40500D229F0 /* Boid.cpp in Sources */,
 				40788DF9EC8A4074A9549703 /* FlockingApp.cpp in Sources */,
-				8EAD137418D9E40500D229F0 /* Flock.cpp in Sources */,
+				8E31ECA918E1B9EE00AE24DA /* Flock.cpp in Sources */,
+				8E31ECA818E1B9EE00AE24DA /* Boid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

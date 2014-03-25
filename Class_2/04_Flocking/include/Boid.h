@@ -11,22 +11,42 @@
 
 #include <iostream>
 #include <vector>
-
+#include <memory>
+#include "cinder/Vector.h"
 
 
 using namespace ci;
 using  namespace std;
-class Boid {
-public:
-    Boid();
-    Boid( const Vec2f &pos );
-    void run();
-    void update();
-private:
-    vector<
-    
-    
-};
 
+namespace oem {
+    //We are using a forward decleration here
+    //since Boid is not yet defined.
+    typedef shared_ptr<class Boid> BoidRef;
+    
+    class Boid {
+    public:
+        Boid();
+        Boid( const Vec2f &pos );
+        void    run(vector<BoidRef> &boids);
+        void    applyForce( const Vec2f &force );
+        void    flock(vector<BoidRef> &boids);
+        void    update();
+        void    render();
+        Vec2f   mLocation;
+        Vec2f   mVelocity;
+        Vec2f   mAcceleration;
+    private:
+
+        float   mR;
+        float   mMaxforce;    // Maximum steering force
+        float   mMaxspeed;    // Maximum speed
+
+        void    borders();
+        Vec2f   seek(const Vec2f& target );
+        Vec2f   seperate(vector<BoidRef> &boids );
+        Vec2f   align(vector<BoidRef> &boids );
+        Vec2f   cohesion(vector<BoidRef> &boids );
+    };
+}
 
 #endif /* defined(__Flocking__Boid__) */

@@ -8,7 +8,16 @@
 
 #ifndef __Flocking__Flock__
 #define __Flocking__Flock__
-
-#include <iostream>
-
+#include "Boid.h"
+namespace oem {
+    class Flock {
+    public:
+        Flock();
+        void run();
+        void render();
+        void addBoid( BoidRef b);
+    private:
+        vector<BoidRef> mBoids;
+    };
+}
 #endif /* defined(__Flocking__Flock__) */
