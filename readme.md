@@ -3,7 +3,7 @@
 
 ## OS X
 
-For the code to compile, we first need to change a user defined setting named "CINDER_PATH",
+In order to compile the code, we first need to change a user defined setting named "CINDER_PATH",
 that can be found in each project's Build Settings and is shown below: 
 
 ![Cinder Path](/readmeAssets/CINDER_PATH.png) 

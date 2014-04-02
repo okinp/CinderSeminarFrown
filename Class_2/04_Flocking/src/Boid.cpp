@@ -10,12 +10,15 @@
 #include "cinder/Rand.h"
 using namespace ci::gl;
 namespace oem {
+    float Boid::seperationWeight = 1.5f;
+    float Boid::alignmentWeight = 1.0f;
+    float Boid::coherenceWeight = 1.0f;
     Boid::Boid( const Vec2f &pos)
     {
         mAcceleration = Vec2f::zero();
         mVelocity = Rand::randVec2f();
         mLocation = pos;
-        mR = 2.0;
+        mR = 0.6;
         mMaxspeed = 2;
         mMaxforce = 0.03;
     }
@@ -35,9 +38,9 @@ namespace oem {
         Vec2f ali = align(boids);      // Alignment
         Vec2f coh = cohesion(boids);   // Cohesion
         // Arbitrarily weight these forces
-        sep*=1.5;
-        ali*=1.0;
-        coh*=1.0;
+        sep*=seperationWeight;
+        ali*=alignmentWeight;
+        coh*=coherenceWeight;
         // Add the force vectors to acceleration
         applyForce(sep);
         applyForce(ali);

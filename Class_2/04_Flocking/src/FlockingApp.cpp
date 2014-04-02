@@ -15,6 +15,7 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 #include "Flock.h"
+#include "cinder/params/Params.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -23,11 +24,13 @@ using namespace oem;
 class FlockingApp : public AppNative {
   public:
 	void setup();
+    void keyDown( KeyEvent event);
 	void mouseDown( MouseEvent event );	
 	void update();
 	void draw();
   private:
     Flock mFlock;
+    params::InterfaceGlRef mParams;
 };
 
 void FlockingApp::setup()
@@ -37,8 +40,18 @@ void FlockingApp::setup()
         BoidRef b(new Boid(getWindowCenter()));
         mFlock.addBoid(b);
     }
+    mParams = params::InterfaceGl::create( getWindow(), "App parameters", toPixels( Vec2i( 200, 100 ) ));
+    mParams->addParam("Seperation", &Boid::seperationWeight, "min=0.00 max=25 step=0.25" );
+    mParams->addParam("Alignment", &Boid::alignmentWeight,"min=0.00 max=25 step=0.25");
+    mParams->addParam("Coherence", &Boid::coherenceWeight,"min=0.00 max=25 step=0.25");
 }
-
+void FlockingApp::keyDown( KeyEvent event)
+{
+//    if ( event.getChar() == ' ')
+//    {
+//        gl::clear( Color( 0, 0, 0 ) );
+//    }
+}
 void FlockingApp::mouseDown( MouseEvent event )
 {
     BoidRef b( new Boid(event.getPos()));
@@ -55,6 +68,7 @@ void FlockingApp::draw()
 	// clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) );
     mFlock.render();
+    mParams->draw();
 }
 
 CINDER_APP_NATIVE( FlockingApp, RendererGl )

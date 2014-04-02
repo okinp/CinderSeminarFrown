@@ -15,7 +15,7 @@ Particle::Particle()
 ,mRadius(5)
 ,mShowVelocity(false)
 {
-    mShowVelocity = true;
+    
 }
 
 Particle::Particle(float radius)
