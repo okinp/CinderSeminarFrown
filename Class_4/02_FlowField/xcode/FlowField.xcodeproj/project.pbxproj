@@ -16,6 +16,7 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8ECEBC6418F290D30073DFD0 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEBC6318F290D30073DFD0 /* Particle.cpp */; };
 		F515D9FD64824C99B1BA6F21 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 032B7366C40742F9AE81A8C9 /* CinderApp.icns */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		8D1107320486CEB800E47090 /* FlowField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ECEBC6218F290BC0073DFD0 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		8ECEBC6318F290D30073DFD0 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../src/Particle.cpp; sourceTree = "<group>"; };
 		D0332242C4004B0E8287D708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF6BBB52B8D249A2A9B26588 /* FlowFieldApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = FlowFieldApp.cpp; path = ../src/FlowFieldApp.cpp; sourceTree = "<group>"; };
 		EE603CD60637495CA7E4397B /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				DF6BBB52B8D249A2A9B26588 /* FlowFieldApp.cpp */,
+				8ECEBC6318F290D30073DFD0 /* Particle.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -120,6 +124,7 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				8ECEBC6218F290BC0073DFD0 /* Particle.h */,
 				EE603CD60637495CA7E4397B /* Resources.h */,
 				0F33AA01970D4E37948303AD /* FlowField_Prefix.pch */,
 			);
@@ -208,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031EF8B79DD94243A90B476B /* FlowFieldApp.cpp in Sources */,
+				8ECEBC6418F290D30073DFD0 /* Particle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
