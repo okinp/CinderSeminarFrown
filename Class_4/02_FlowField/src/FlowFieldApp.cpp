@@ -41,7 +41,6 @@ void FlowFieldApp::setup()
 {
     Particle p;
     mParticles = vector<Particle>(mMaxParticles, p );
-    gl::enableAlphaBlending();
     for ( auto& particle : mParticles )
     {
         Vec2f pos( Rand::randInt(getWindowWidth())
@@ -85,7 +84,7 @@ void FlowFieldApp::update()
             count++;
         }
     }
-    //Start up to "needed" inactive ones
+    //Start up-to "needed" inactive ones
     int needed = 0.01*(mMaxParticles - count);
     for ( auto& particle : mParticles )
     {
